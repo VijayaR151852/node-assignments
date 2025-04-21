@@ -161,7 +161,6 @@ app.put("/todos/:todoId/", async (request, response) => {
       status='${status}'
     WHERE
       id = ${todoId};`;
-
   await database.run(updateTodoQuery);
   response.send(`${updateColumn} Updated`);
 });
